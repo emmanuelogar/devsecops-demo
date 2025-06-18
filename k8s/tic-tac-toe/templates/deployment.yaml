@@ -39,5 +39,4 @@ spec:
               port: {{ .Values.readinessProbe.port }}
             initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
-      imagePullSecrets:
-        - name: {{ .Values.imagePullSecrets }}
+
