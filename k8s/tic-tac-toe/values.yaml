@@ -1,0 +1,46 @@
+name: tic-tac-toe
+app: tic-tac-toe
+
+replicaCount: 3
+
+image:
+  repository: docker.io/emmanuelogar/tic-tac-toe:
+  tag: sha-fb64dc2ac8cd8d79ad4a75c58326596b59eaf402
+  pullPolicy: Always
+
+containerPort: 80
+
+resources:
+  limits:
+    cpu: "0.5"
+    memory: "512Mi"
+  requests:
+    cpu: "0.2"
+    memory: "256Mi"
+
+livenessProbe:
+  path: /
+  port: 80
+  initialDelaySeconds: 30
+  periodSeconds: 10
+
+readinessProbe:
+  path: /
+  port: 80
+  initialDelaySeconds: 5
+  periodSeconds: 5
+
+imagePullSecrets: github-container-registry
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+ingress:
+  host: tic-tac-toe.example.com
+  path: /
+  annotations: {}
+  tls:
+    enabled: false
+    secretName: tic-tac-toe-tls
