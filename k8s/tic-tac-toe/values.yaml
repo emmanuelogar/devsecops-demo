@@ -4,7 +4,7 @@ app: tic-tac-toe
 replicaCount: 1
 
 image:
-  repository: ghcr.io/emmanuelogardevsecops-demo
+  repository: ghcr.io/emmanuelogar/devsecops-demo
   tag: sha-fb64dc2ac8cd8d79ad4a75c58326596b59eaf402
   pullPolicy: Always
 
