@@ -5,7 +5,7 @@ replicaCount: 1
 
 image:
   repository: docker.io/emmanuelogar/tic-tac-toe
-  tag: sha-fb64dc2ac8cd8d79ad4a75c58326596b59eaf402
+  tag: sha-00fe2174e664665f5b6b1c918e2311487604aeb6
   pullPolicy: Always
 
 containerPort: 80
