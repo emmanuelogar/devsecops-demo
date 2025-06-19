@@ -20,6 +20,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.containerPort }}
+        - name: debug
+          image: busybox
+          command: ["sleep", "3600"]
           resources:
             limits:
               cpu: {{ .Values.resources.limits.cpu }}
