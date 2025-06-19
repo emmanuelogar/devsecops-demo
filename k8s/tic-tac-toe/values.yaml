@@ -4,9 +4,12 @@ app: tic-tac-toe
 replicaCount: 1
 
 image:
-  repository: docker.io/emmanuelogar/tic-tac-toe
+  repository: ghcr.io/emmanuelogardevsecops-demo
   tag: sha-fb64dc2ac8cd8d79ad4a75c58326596b59eaf402
   pullPolicy: Always
+
+imagePullSecrets:
+  name: github-container-registry
 
 containerPort: 80
 
