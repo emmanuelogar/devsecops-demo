@@ -1,10 +1,10 @@
 name: tic-tac-toe
 app: tic-tac-toe
 
-replicaCount: 3
+replicaCount: 1
 
 image:
-  repository: docker.io/emmanuelogar/tic-tac-toe:
+  repository: docker.io/emmanuelogar/tic-tac-toe
   tag: sha-fb64dc2ac8cd8d79ad4a75c58326596b59eaf402
   pullPolicy: Always
 
@@ -29,8 +29,6 @@ readinessProbe:
   port: 80
   initialDelaySeconds: 5
   periodSeconds: 5
-
-imagePullSecrets: github-container-registry
 
 service:
   type: ClusterIP
