@@ -5,7 +5,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/emmanuelogar/devsecops-demo
-  tag: sha-b457b4465692f69639a2401c9ff89c0b6d4b96b7
+  tag: sha-5dda3586862c3d058fbedba8273336cc6c92dacd
   pullPolicy: Always
 
 imagePullSecrets:
