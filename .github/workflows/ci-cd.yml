@@ -86,6 +86,7 @@ jobs:
   docker:
     name: Docker Build and Push
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: [build]
     env:
       REGISTRY: docker.io
